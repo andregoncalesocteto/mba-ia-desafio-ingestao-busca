@@ -1,3 +1,6 @@
 .env
+.cursor
+.specify
 /venv
+/specs
 __pycache__

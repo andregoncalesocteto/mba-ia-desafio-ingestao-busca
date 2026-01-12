@@ -29,5 +29,17 @@ services:
       -c "CREATE EXTENSION IF NOT EXISTS vector;"
     restart: "no"
 
+  adminer:
+    image: adminer:4
+    container_name: adminer_rag
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
 volumes:
   postgres_data:
