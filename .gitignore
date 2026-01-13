@@ -1,6 +1,9 @@
 .env
 .cursor
 .specify
+.vscode
+.claude
 /venv
 /specs
 __pycache__
+CLAUDE.md
